@@ -1,0 +1,93 @@
+
+<div class="allwrapper">
+
+    <mat-toolbar [color]="color">
+        
+        <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        <div class="spacer py-2 mx-2"></div>
+        <span>
+        Elegance Tools
+    </span>
+    
+        
+    </mat-toolbar>
+
+    
+        <mat-sidenav-container hasBackdrop="false" mode="over" >        
+        <mat-sidenav #sidenav>
+            
+            <mat-nav-list>
+                <div mat-subheader>
+                    Enter / Fill
+                </div>
+                <a mat-list-item routerLink="index">  
+                    <mat-icon matListIcon>create</mat-icon>  
+                    <div  >
+                        Enter Laptops Info
+                    </div>
+                    
+                    
+                </a>
+
+                <a routerLink="product-movement" mat-list-item>  
+                    <mat-icon matListIcon>create</mat-icon>  
+                    <div mat-line >
+                        Enter Product Movement
+                    </div>
+                    <div mat-line>
+                        For Individuals Collecting Laptops
+                    </div>
+                    
+                    
+                </a>
+                <a routerLink="sales" mat-list-item>  
+                <mat-icon matListIcon>create</mat-icon>  
+                <div   >
+                    Enter Sales
+                </div>
+                
+                
+                
+            </a>
+
+            <a mat-list-item routerLink="faulty">  
+                <mat-icon matListIcon>create</mat-icon>  
+                <div   >
+                    Enter Faults
+                </div>
+                
+                
+                
+            </a>
+              
+            </mat-nav-list>
+
+            <mat-nav-list>
+                <div mat-subheader>
+                   Get
+                </div>
+                <a mat-list-item routerLink="product-dashboard">  
+                    <mat-icon matListIcon>create</mat-icon>  
+                    <div  >
+                        Product Dashboard
+                    </div>
+                    
+                    
+                </a>
+
+               
+              
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
+
+        </mat-sidenav-content>
+
+
+    </mat-sidenav-container>
+
+
+</div>
